@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>arch34science</title>
+<style>
+:root {
+  --bg: #ffffff; --text: #1d2433; --muted: #5b6475; --accent: #2f6fed; --card: #f3f5fa;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg: #12151c; --text: #e8ebf2; --muted: #9aa3b5; --accent: #6b9bff; --card: #1c212c; }
+}
+:root[data-theme="dark"] { --bg: #12151c; --text: #e8ebf2; --muted: #9aa3b5; --accent: #6b9bff; --card: #1c212c; }
+* { box-sizing: border-box; }
+html { scroll-padding-top: env(safe-area-inset-top, 0px); scroll-behavior: smooth; }
+body { margin: 0; background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; line-height: 1.6; }
+.wrap { max-width: 860px; margin: 0 auto; padding: 0 20px; }
+header { border-bottom: 1px solid var(--card); }
+header .wrap { display: flex; justify-content: space-between; align-items: center; padding-top: 16px; padding-bottom: 16px; flex-wrap: wrap; gap: 8px; }
+.logo { font-weight: 700; font-size: 1.2rem; }
+nav a { color: var(--muted); text-decoration: none; margin-left: 18px; }
+nav a:hover { color: var(--accent); }
+.hero { padding: 64px 0 40px; text-align: center; }
+.hero h1 { font-size: 2.4rem; margin: 0 0 12px; }
+.hero p { color: var(--muted); font-size: 1.1rem; margin: 0; }
+section { padding: 32px 0; }
+h2 { margin: 0 0 16px; }
+video { width: 100%; max-width: 100%; border-radius: 12px; background: #000; aspect-ratio: 16 / 9; }
+.card { background: var(--card); border-radius: 12px; padding: 20px; }
+footer { border-top: 1px solid var(--card); padding: 24px 0; text-align: center; color: var(--muted); font-size: 0.9rem; }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <span class="logo">arch34science</span>
+    <nav>
+      <a href="#video">Видео</a>
+      <a href="#about">О сайте</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <h1>Добро пожаловать</h1>
+    <p>Это простой сайт для хранения информации и видео.</p>
+  </div>
+
+  <section id="video">
+    <h2>Видеоплеер</h2>
+    <video controls poster="">
+      <!-- Сюда позже добавим файл: <source src="video.mp4" type="video/mp4"> -->
+      Ваш браузер не поддерживает видео.
+    </video>
+  </section>
+
+  <section id="about">
+    <h2>О сайте</h2>
+    <div class="card">
+      <p>Здесь будет описание проекта: что это, для кого и зачем. Этот текст можно заменить на любой свой.</p>
+    </div>
+  </section>
+
+  <section id="contacts">
+    <h2>Контакты</h2>
+    <div class="card">
+      <p>Почта: <a href="mailto:example@mail.com" style="color: var(--accent)">example@mail.com</a></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 arch34science</div>
+</footer>
+</body>
+</html>
